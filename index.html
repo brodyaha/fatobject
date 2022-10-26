@@ -28,7 +28,7 @@
     </style>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="top-section">
         <header class="header">
             <div class="full-container">
                 <div class="header-body">
@@ -36,20 +36,20 @@
                         <img src="./img/62738bb78beb1da7902ba1c7_Fatobject-Logo.svg" alt="logo">
                     </a>
                     <nav class="navbar-menu">
-                        <a href="#" class="header-link" onmouseover="hoverOnLink1()" onmouseout="hoverOffLink1()">
+                        <a href="#project" class="header-link" onmouseover="hoverOnLink1()" onmouseout="hoverOffLink1()">
                             <div class="navlink-conten">
                                 <div class="btn-label">Project</div>
                                 <div class="navlink-bottom" id="navlink-bottom1"></div>
                             </div>
                         </a>
-                        <a href="#" class="header-link" onmouseover="hoverOnLink2()" onmouseout="hoverOffLink2()">
+                        <a href="#contact" class="header-link" onmouseover="hoverOnLink2()" onmouseout="hoverOffLink2()">
                             <div class="navlink-conten">
                                 <div class="btn-label">Contacts</div>
                                 <div class="navlink-bottom" id="navlink-bottom2"></div>
                             </div>
                         </a>
                         <div class="cta-frame">
-                            <a href="#" class="btn" onmouseover="hoverOnLink3()" onmouseout="hoverOffLink3()">
+                            <a href="#talk" class="btn" onmouseover="hoverOnLink3()" onmouseout="hoverOffLink3()">
                                 <div class="btn-label with-icon nav-bar">Let's talk</div>
                                 <img src="https://uploads-ssl.webflow.com/62738bb78beb1d26632ba17e/62738bb78beb1d3b392ba1bd_glyph-arrow-right-white.svg" loading="lazy" alt="->" loading="lazy" alt class="btn-icon">
                                 <div class="btn-border-frame">
@@ -110,7 +110,7 @@
                 </div>
             </div>
         </section>
-        <section class="projects">
+        <section class="projects" id="project">
             <div class="main-container">
                 <div class="home-projects-content">
                     <div class="home-projects-head after-40">
@@ -300,7 +300,7 @@
         <footer class="footer">
             <div class="full-container">
                 <div class="contacts-content">
-                    <div class="contact-form">
+                    <div class="contact-form" id="talk">
                         <div class="contact-form-head">
                             <h2 class="after-30">Let's Talk</h2>
                             <p class="p-1">We're always interested in working on new products. Reach us now to discuss what you have in mind!</p>
@@ -350,7 +350,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contacts-data">
+                    <div class="contacts-data" id="contact">
                         <div id="contacts-block" class="ancor-point contacts-block"></div>
                         <div class="contacts-data-head">
                             <h3 class="after-30">Contacts</h3>
@@ -420,7 +420,7 @@
         <div class="page-progress-block">
             <div class="full-container">
                 <div class="page-progress-frame">
-                    <div data-w-id="f3a4e5bf-a1aa-5b44-f361-648632b04b40" class="page-progress" style="will-change: transform; transform: translate3d(0px, 0px, 0px) scale3d(1, 0, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"></div>
+                    <div class="page-progress" id="myProgress"></div>
                 </div>
             </div>
         </div>
@@ -429,6 +429,18 @@
     <script src="./js/script.js" type="text/javascript"></script>
     <script>
 
+    window.onscroll = function() {
+        docScroll ();
+    }
+
+    function docScroll () {
+        let windowScroll = document.body.scrollTop || document.documentElement.scrollTop,
+        documentHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+        scrolled = (windowScroll / documentHeight) * 100;
+
+        document.getElementById('myProgress').style.height = scrolled + '%';
+    }
+    docScroll ();
     
 
 

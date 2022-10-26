@@ -1132,15 +1132,8 @@ img {
 }
 
 .page-progress {
-    height: 100%;
+    height: 0%;
     background-color: #183443;
-    -webkit-transform: scale3d(1, 0, 1);
-    transform: scale3d(1, 0, 1);
-    -webkit-transform-origin: 0% 0%;
-    -ms-transform-origin: 0% 0%;
-    transform-origin: 0% 0%;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
     transition: all 0.8s ease 0s;
 }
 
